@@ -15,16 +15,16 @@ def play2048( times ):
     browser.get('https://gabrielecirulli.github.io/2048/')
     
     htmlElem = browser.find_element_by_tag_name('html')
-    FinalScoreElem = browser.find_element_by_class_name('score-container')
+    scoreElem = browser.find_element_by_class_name('score-container')
 
 
-move = 0
-for move in range(times):
-    htmlElem.send_keys(Keys.UP)
-    htmlElem.send_keys(Keys.Right)
-    htmlElem.send_keys(Keys.Down)
-    htmlElem.send_keys(Keys.Left)
-    move += 1
+    move = 0
+    for move in range(times):
+        htmlElem.send_keys(Keys.UP)
+        htmlElem.send_keys(Keys.Right)
+        htmlElem.send_keys(Keys.Down)
+        htmlElem.send_keys(Keys.Left)
+        move += 1
 
 
-print('Your Final Score is: ' + FinalScoreElem.text)
+    print('Your Final Score is: ' + scoreElem.text)
