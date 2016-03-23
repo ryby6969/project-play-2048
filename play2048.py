@@ -21,9 +21,9 @@ def play2048( times ):
     move = 0
     for move in range(times):
         htmlElem.send_keys(Keys.UP)
-        htmlElem.send_keys(Keys.Right)
-        htmlElem.send_keys(Keys.Down)
-        htmlElem.send_keys(Keys.Left)
+        htmlElem.send_keys(Keys.LEFT)
+        htmlElem.send_keys(Keys.DOWN)
+        htmlElem.send_keys(Keys.RIGHT)
         move += 1
 
 
